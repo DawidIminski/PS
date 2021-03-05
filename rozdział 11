@@ -1,0 +1,330 @@
+# include  < stdio.h >
+# include  < string.h >
+# include  < stdlib.h >
+# include  < ctype.h >
+int  zawiera ( char , char []);
+char  functionForExample6 ( char [], char [], int );
+char * functionForExample8 ( char *);
+char * functionForExample9 ( char *);
+int  pierwiastek ( int );
+
+int  main ()
+{
+    // zad1 ();
+    // zad2 ();
+    // zad3 ();
+    // zad4 ();
+    // zad5 ();
+    // zad6 ();
+    // zad7 ();
+    // zad8 ();
+    // zad9 ();
+    // zad10 ();
+    zad11 ();
+    return  0 ;
+}
+  zad1 () {
+    functionForExample1 ();
+}
+ zad2 () {
+    functionForExample2 ();
+}
+  zad3 () {
+    functionForExample3 ();
+}
+ zad4 () {
+    functionForExample4 ();
+}
+  zad5 () {
+    słowa char [ 81 ];
+    znak znaku;
+    char * tekst = " Zadanie nr 5 \ n Wprowadz dane " ;
+    char * wanted = " Wprowadzanie szukany znak " ;
+    puts (tekst);
+    dostaje (słowa);
+    puts (poszukiwany);
+    scanf ( " % c " , & znak);
+    zawiera (znak, słowa);
+}
+  zad6 () {
+    char wordsFrom [ 70 ];
+    char wordsTarget [ 100 ];
+    puts ( „ Zadanie nr 6 ” );
+    puts ( " Wprowadz dane ktore krocowac kroczyć " );
+    gets (wordsFrom);
+    char * wsk = functionForExample6 (wordsFrom, wordsTarget, 5 );
+    puts (wordsTarget);
+}
+ zad7 () {
+    puts ( " Zadanie nr 7 " );
+    tablica char1 [ 81 ];
+    tablica char2 [ 81 ];
+    puts ( " Zadanie nr 7 \ n Wprowadz dane pierwszego znacznika " );
+    char * wsk1 = gets (table1);
+    puts ( " wprowadzony dane drugiego znacznika " );
+    char * wsk2 = gets ( table2 );
+    zawiera_lan (wsk1, wsk2);
+}
+ zad8 () {
+    puts ( " Zadanie nr 8 " );
+    tablica char1 [ 81 ];
+    puts ( „ Wprowadz dane ktore chcesz, zebym pytania ” );
+    char * pointer = gets (table1);
+    puts ( functionForExample8 (wskaźnik));
+    // puts (tabela1);
+    puts ( " koniec zadania " );
+}
+  zad9 () {
+    puts ( " Zadanie nr 9 " );
+    tablica char1 [ 81 ];
+    char * wskaźnik;
+    while ( pobiera (table1) && table1 [ 0 ]! = ' \ 0 ' ) {
+        pointer = tabela1;
+        puts ( functionForExample9 (wskaźnik));
+        puts ( " Wprowadzone kolejne dane, lub zakoncz program " );
+    }
+    puts ( „ wykrylem pusta linie, koncze dzialanie ” );
+}
+  zad10 () {
+    puts ( " Zadanie 10 \ n podaj maksymalnie 10 wierszy " );
+    char łańcuchy [ 10 ] [ 81 ];
+    char * pointer [ 10 ];
+    int counter = 0 ;
+    int k;
+    menu int ;
+    while ( gets (strings [counter])! = NULL && counter < 9 ) {
+        wskaźnik [licznik] = ciągi [licznik];
+        licznik ++;
+    }
+    puts ( " 1 - wyswietlenie pierwotnego lancucha \ n 2 - sortowanie po ASCII \ n 3 - kolejnosc rosnaca \ n 4 - wg pierwszego slowa \ n 5 - koniec " );
+    while ( scanf ( " % d " , & menu)! = 5 ) {
+        switch (menu) {
+            przypadek  1 :
+                puts ( " opcja 1 " );
+                for ( int i = 0 ; i < 10 ; i ++) {
+                    puts (stringi [i]);
+                }
+                przerwa ;
+            przypadek  2 :
+                puts ( " opcja nr 2 " );
+                przerwa ;
+            przypadek  3 :
+                sortOfStrings (wskaźnik, licznik);
+                puts ( " posortowana lista " );
+                for (k = 0 ; k <counter; k ++) {
+                    puts (wskaźnik [k]);
+                }
+                przerwa ;
+            przypadek  4 :
+                puts ( " opcja nr 4 " );
+                sortOfLenght (wskaźnik, licznik);
+                puts ( " posortowana lista " );
+                for (k = 0 ; k <counter; k ++) {
+                    puts (wskaźnik [k]);
+                }
+                przerwa ;
+            przypadek  5 :
+                puts ( " koniec programu " );
+                przerwa ;
+            domyślnie :
+                puts ( " wybierz ponownie " );
+                przerwa ;
+        }
+    }
+}
+ zad11 () {
+    puts ( " Zadanie nr 11 \ n Wprowadz dane " );
+    char tableOfString [ 81 ];
+    int słowa = 0 ;
+    int lowerCase = 0 ;
+    int upperCase = 0 ;
+    int spacje = 0 ;
+    liczby int = 0 ;
+    int słowo = 0 ;
+    while ( scanf ( " % s " , tableOfString)! = EOF) {
+        int size = strlen (tableOfString);
+        for ( int i = 0 ; i <size; i ++) {
+            if (tableOfString [i] == '  ' ) {
+                if ( isalnum (tableOfString [i + 1 ])! = 0 ) {
+                    słowa ++;
+                }
+        } else  if ( isalnum (tableOfString [i])! = 0 ) {
+            słowo ++;
+        } else  if ( isspace (tableOfString [i]! = 0 )) {
+            spacje ++;
+        } else  if ( islower (tableOfString [i]! = 0 )) {
+            lowerCase ++;
+        } else  if ( isupper (tableOfString [i])! = 0 ) {
+            upperCase ++;
+        } else  if ( isdigit (tableOfString [i])! = 0 ) {
+            liczby ++;
+        }
+    }
+    }
+    printf ( " ilosc litr: % d , wolna: % d , mężczyzna: % d , duze: % d , cyfry: % d , spacje: % d " , słowo, słowa, dolna litera, górna litera, cyfry, spacje);
+}
+void  functionForExample1 () {
+    słowa char [ 81 ];
+    char * tekst = " Zadanie nr 1 \ n Wprowadz dane, pobiore je oraz wyswietle " ;
+    puts (tekst);
+    dostaje (słowa);
+    puts ( " Sprawdzmy jakie dane pobralem " );
+    puts (słowa);
+}
+void  functionForExample2 () {
+    słowa char [ 81 ];
+    int n;
+    char * tekst = " Zadanie nr 2 \ n Wprowadz dane, pobiore je, ale przestane czytac w kilku przypadkach " ;
+    puts (tekst);
+    char * wsk = gets (words);
+    puts ( " do ilu znakow mam pobrac? " );
+    scanf ( " % d " , & n);
+        while (wsk! = ' \ 0 ' ) {
+            for ( int i = 0 ; i <n; i ++) {
+                if (wsk [i] == '  ' ) {
+                    puts ( " \ n wykryto spacje, koncze dzialanie " );
+                    przerwa ;
+                } else  if (wsk [i] == ' \ n ' ) {
+                    puts ( " \ n wykryto nowa linie, koncze dzialanie " );
+                    przerwa ;
+                } else  if (wsk [i] == ' \ t ' ) {
+                    puts ( " \ n wykryto tabulator, koncze dzialanie " );
+                    przerwa ;
+                }
+                putchar (* (wsk + i));
+            }
+            puts ( " koniec tablicy " );
+            przerwa ;
+        }
+}
+void  functionForExample3 () {
+    słowa char [ 81 ];
+    char * tekst = " Zadanie nr 3 \ n Wprowadz dane " ;
+    puts (tekst);
+    scanf ( " % s " , słowa);
+    puts (słowa);
+}
+void  functionForExample4 () {
+    słowa char [ 81 ];
+    znak znaku;
+    char * tekst = " Zadanie nr 4 \ n Wprowadził lancuch znakow " ;
+    puts (tekst);
+    dostaje (słowa);
+    puts ( " Jaki mam znalezc znak w tych danych? Zwroce Ci wskaznik " );
+    scanf ( " % c " , & znak);
+    for ( char * wsk = strchr (words, sign); wsk! = NULL ; wsk = strchr (wsk + 1 , sign)) {
+        printf ( " szukany znak zostal znaleziony na pozycji % d \ n " , wsk + 1 - słowa);
+    }
+}
+Int  zawiera ( znak znak, char słowa []) {
+    int wynik = 0 ;
+    for ( char * wsk = strchr (words, sign); wsk! = NULL ; wsk = strchr (wsk + 1 , sign)) {
+        if (wsk! = NULL ) {
+            puts ( " prawda " );
+            wynik = 1 ;
+            przerwa ;
+        }
+    }
+    printf ( " % d \ n " , wynik);
+    wynik zwrotu ;
+}
+char  functionForExample6 ( char from [], char target [], int size) {
+    int counter = 0 ;
+    while (counter <size && from [counter]! = NULL ) {
+            cel [licznik] = z [licznik];
+            licznik ++;
+    }
+    puts ( " dane zostaly kopowane " );
+    cel zwrotu ;
+}
+void  zawiera_lan ( char * wsk1, char * wsk2) {
+    int y;
+    int valPointer = 0 ;
+    for ( int i = 0 ; i < 10 ; i ++) {
+        if ( strcmp (wsk1 + i, wsk2) == 0 ) {
+            printf ( " wykryto podobienstwo na pozycji nr % d ! \ n " , i + 1 );
+            y = i;
+            valPointer = 1 ;
+            przerwa ;
+        } else {
+        }
+    }
+    if (valPointer == 0 ) {
+        puts ( NULL );
+        puts ( „ 0 ” );
+    } else  if (valPointer == 1 ) {
+        printf ( " Adres podobienstwa danych lancuchow do % p \ n " , & wsk1 + y);
+    }
+}
+char * functionForExample8 ( char * wsk) {
+    int size = strlen (wsk);
+    char newWsk [rozmiar];
+    for ( int i = 0 ; i <size; i ++) {
+        newWsk [i] = wsk [rozmiar - (i + 1 )];
+        puts ( „ dokonalem wrzucania do innego wskaznika ” );
+    }
+    newWsk [rozmiar] = ' \ 0 ' ;
+    strcpy (wsk, newWsk);
+    puts ( " literowano do tego samego wskaznika " );
+    powrót wsk;
+}
+char * functionForExample9 ( char * pointer) {
+    int size = strlen (wskaźnik);
+    int spacje = 0 ;
+    int sizeOfSecTab;
+    int counter = 0 ;
+    for ( int i = 0 ; i <size; i ++) {
+        if (wskaźnik [i] == '  ' ) {
+            spacje ++;
+        }
+    }
+    sizeOfSecTab = size - spacje;
+    char secondTable [sizeOfSecTab];
+    for ( int i = 0 , counter = 0 ; i <size; i ++) {
+        if (wskaźnik [i]! = '  ' ) {
+            secondTable [licznik] = wskaźnik [i];
+            licznik ++;
+        } else  if (wskaźnik [i] == '  ' ) {
+            puts ( " wykrylem spacje " );
+        }
+    }
+    puts (secondTable);
+    // lub strcat
+    return secondTable;
+}
+void  sortOfStrings ( char * strings [], int num) {
+    char * wskaźnik;
+    int dol, szuk;
+    for (dol = 0 ; dol <num - 1 ; dol ++) {
+        for (szuk = dol + 1 ; szuk <num; szuk ++) {
+            if ( strcmp (strings [dol], strings [szukanie])> 0 ) {
+                pointer = strings [dol];
+                strings [dol] = strings [szuk];
+                strings [szuk] = wskaźnik;
+            }
+        }
+    }
+}
+void  sortOfLenght ( char * strings [], int num) {
+    char * wskaźnik;
+    int dol, szuk, counter1, counter2;
+    for (dol = 0 ; dol <num - 1 ; dol ++) {
+        for (szuk = dol + 1 ; szuk <num; szuk ++) {
+                if (strings [dol] [dol]! = '  ' ) {
+                    counter1 ++;
+                }
+                if (strings [szuk] [dol]! = '  ' ) {
+                   counter2 ++;
+                   }
+            if (counter1> counter2) {
+                pointer = strings [dol];
+                strings [dol] = strings [szuk];
+                strings [szuk] = wskaźnik;
+            }
+        }
+    }
+}
+int  pierwiastek ( int number) {
+    int wynik = sqrt (liczba);
+    wynik zwrotu ;
+}
