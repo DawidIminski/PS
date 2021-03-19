@@ -57,7 +57,7 @@ int  main ()
     miesiąc char [ 20 ];
     char wsk;
     int dzień;
-    char * text = " wpisz nazwe miesiaca lub jego skrot " ;
+    char * text = " wprowadz nazwe miesiaca lub jego skrot " ;
     puts (tekst);
     pobiera (miesiąc);
     wsk = miesiąc;
