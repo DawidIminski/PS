@@ -1,0 +1,164 @@
+# include  < stdio.h >
+# include  < string.h >
+# include  „ structure.c ”
+# zdefiniuj  LEN_MONTH  20
+# zdefiniuj  LEN_SHORTCUT  3
+# zdefiniuj  ROZMIAR  14
+# zdefiniuj  MAXAUT  40
+# zdefiniuj  MAXTIT  40
+# zdefiniuj  MAXSIZE  100
+
+struct strMonths tabelOfStruct [SIZE] = {
+        " styczen " , " sty " , 31 , 1 ,
+        " luty " , " lut " , 28 , 2 ,
+        " marzec " , " mar " , 31 , 3 ,
+        „ kwiecien ” , „ kwi ” , 30 , 4 ,
+        „ maj ” , „ maj ” , 31 , 5 ,
+        „ czerwiec ” , „ cze ” , 30 , 6 ,
+        " lipiec " , " warga " , 31 , 7 ,
+        „ sierpien ” , „ sie ” , 31 , 8 ,
+        " wrzesien " , " wrz " , 30 , 9 ,
+        " pazdziernik " , " paz " , 31 , 10 ,
+        „ listopad ” , „ lis ” , 30 , 11 ,
+        „ grudzien ” , „ gru ” , 31 , 12
+};
+struct strBook {
+    tytuł znaku [MAXTIT];
+    char autor [MAXAUT];
+    cena zmienna ;
+};
+struct strPersonalData {
+    char nazwa [ 20 ];
+    char secondName [ 20 ];
+    nazwisko char [ 20 ];
+};
+
+struct strPesel {
+    struct strPersonalData datas;
+    długi  int pesel;
+};
+
+int  main ()
+{
+    // zad1 ();
+    // zad2 ();
+    // zad3 ();
+    zad4 ();
+
+
+    return  0 ;
+}
+ zad1 () {
+    // functionForExample1 (5);
+    functionForExample1 ( " luty " );
+}
+
+  zad2 () {
+    miesiąc char [ 20 ];
+    char wsk;
+    int dzień;
+    char * text = " wpisz nazwe miesiaca lub jego skrot " ;
+    puts (tekst);
+    pobiera (miesiąc);
+    wsk = miesiąc;
+    puts ( " teraz numer dnia " );
+    scanf ( " % d " , & dzień);
+    functionForExample2 (miesiąc, dzień);
+
+}
+
+  zad3 () {
+    struct strBook book [MAXSIZE];
+    int counter = 0 ;
+    char quickTitle [ 100 ];
+    printf ( " Podaj tytul ksiazki, lub nacisnij enter, aby zakonczyc \ n " );
+    while (counter <MAXSIZE && gets (book [counter]. title )! = NULL && book [counter]. title [ 0 ]! = ' \ 0 ' ' ) {
+            printf ( " wpisz autora \ n " );
+            pobiera (książka [licznik]. autor );
+            printf ( " wpisz cene \ n " );
+            scanf ( " % f " , & book [counter ++]. price );
+            while ( getchar ()! = ' \ n ' ) {
+                kontynuować ;
+            }
+            if (licznik <MAXSIZE) {
+                printf ( " wpisz kolejny tytul \ n " );
+            }
+    }
+
+    for ( int i = 0 ; i <counter; i ++) {
+        for ( int j = i + 1 ; j <licznik; j ++) {
+            if ( strcmp (książka [i]. tytuł , książka [j]. tytuł )> 0 ) {
+                strcpy (quickTitle, książka [i]. tytuł );
+                strcpy (książka [i]. tytuł , książka [j]. tytuł );
+                strcpy (książka [j]. tytuł , szybkiTitle);
+
+            }
+        }
+    }
+    printf ( " O to lista ksiazek w kolejnosci alfabetycznej " );
+    for ( int i = 0 ; i <counter; i ++) {
+            puts (książka [i]. tytuł );
+    }
+
+}
+  zad4 () {
+    struct strPesel data [ 3 ] = {
+    „ Paul ” , „ Michael ” , „ Brown ” , 88021223546 ,
+    „ Patrick ” , „ ” , „ Black ” , 75072255623 ,
+    „ David ” , „ Kristen ” , „ Giggs ” , 71042512374 ,
+    };
+    functionForExample4 (dane);
+
+
+}
+
+void  functionForExample0 ( int numberOfMonth) {
+    int sum = 0 ;
+
+    for ( int i = 0 ; i <= numberOfMonth; i ++) {
+        sum + = tabelOfStruct [i]. daysMonth ;
+    }
+    printf ( " suma dni do miesiaca % s do % d \ n " , tabelOfStruct [numberOfMonth]. month , sum);
+
+}
+void  functionForExample1 ( char * month) {
+    int sum = 0 ;
+    int counter = 0 ;
+
+    while ( strcmp (month, tabelOfStruct [counter]. month )! = 0 ) {
+            licznik ++;
+    }
+    for ( int i = 0 ; i <= counter; i ++) {
+        sum + = tabelOfStruct [i]. daysMonth ;
+    }
+    printf ( " wybrany miesiac to % s , liczba dni do: % d \ n " , tabelOfStruct [licznik]. miesiąc, suma);
+
+}
+void  functionForExample2 ( char * month, int day) {
+    int sum = 0 ;
+    int counter = 0 ;
+
+    while ( strcmp (month, tabelOfStruct [counter]. month )! = 0 && strcmp (month, tabelOfStruct [counter]. shortcut )) {
+          licznik ++;
+          }
+    for ( int i = 0 ; i <= counter; i ++) {
+        sum + = tabelOfStruct [i]. daysMonth ;
+
+
+    }
+    int days = tabelOfStruct [licznik]. daysMonth - dzień;
+    suma - = dni;
+    printf ( " suma dni: % d " , suma);
+
+}
+void  functionForExample4 ( struct strPesel variable []) {
+    for ( int i = 0 ; i < 3 ; i ++) {
+        jeśli (zmienna [I]. zakresie danych . secondName [ 0 ] == ' 0 \ ' ) {
+            printf ( " % s , % s - % ld \ n " , zmienna [i]. dane . nazwa , zmienna [i]. dane . nazwisko , zmienna [i]. pesel );
+
+        } else {
+            printf ( " % s , % s  % c . - % ld \ n " , zmienna [i]. dane . nazwa , zmienna [i]. dane . nazwisko , zmienna [i]. dane . secondName [ 0 ], zmienna [i]. pesel );
+
+        }
+    }
+}
