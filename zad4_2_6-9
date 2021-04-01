@@ -155,17 +155,6 @@ void functionForzad4_2_9(unsigned n, int *wsk1, int *wsk2, int *wsk3){
         }else if(*(wsk3 + i) > *(wsk1 + i) && *(wsk3 + i) < *(wsk2 + i)){
             *(wsk2 + i) = *(wsk3 + i);
 
-        }
-    }
-    //podpunkt c
-    for(int i = 0; i < n; i++){
-         if(*(wsk2 + i) <= *(wsk3 + i) && *(wsk2 + i) <= *(wsk1 + i)){
-            *(wsk1 + i) = *(wsk2 + i);
-
-        }else if(*(wsk3 + i) <= *(wsk2 + i) && *(wsk3 + i) <= *(wsk1 + i)){
-            *(wsk1 + i) = *(wsk3 + i);
-
-        }
     }
 
 }
