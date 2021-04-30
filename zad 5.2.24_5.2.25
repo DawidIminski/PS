@@ -1,0 +1,37 @@
+# include  < stdio.h >
+# include  < string.h >
+# include  < stdlib.h >
+
+
+int ** function1 ( unsigned  int , int []);
+int  main ()
+{
+    char * a = " qwerty " ;
+    char ** b ;
+
+
+
+    return  0 ;
+}
+// zad 5.2.24
+
+void  kopiuj ( char * string, char table []) {
+
+
+    strcpy (tabela, napis);
+
+}
+// zad 5.2.25
+
+void  kopiuj2 ( char * string1 , char ** string2) {
+
+
+    const  int size = strlen (string1);
+    char tableStr1 [rozmiar];
+
+    strcpy (tableStr1, string1);
+    char * wsk = tableStr1;
+    string2 [ 0 ] = wsk;
+    puts (string2 [ 0 ]);
+
+}
