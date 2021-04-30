@@ -1,0 +1,54 @@
+\\ 5.2.3
+#inculde < stdio.h>
+#zdefiniuj MAX 82
+int porownaj (char * nap1, char * nap2);
+
+
+int porownaj (char * nap1, char* nap2) {
+
+int i = 1;
+while (* nap1! =  '\0'// * nap2! = '\0') {
+if (*nap1! = * nap2) i = 0;
+
+*nap1 ++;
+*nap2 ++;
+}
+powrót i;
+}
+
+int main ( void) {
+char napis1 [MAX];
+char napis2 [MAX];
+dostaje (napis1);
+dostaje (napis2);
+if (porownaj (napis1, napis2)) printf (" Napisy sa takie same \n ");
+else printf (Napisy roznia sie \ n");
+system ("pauza");
+return 0 ;
+}
+
+\\5.2.5
+#include <stdio.h>
+#zdefiniuj MAX 82
+viod przepisz ( char * nap1, char * nap2);
+
+
+void przepisz ( char * nap1, char * nap2) {
+while (*nap1! = ' \ 0 ' ) {
+* nap2 = * nap1;
+* nap1 ++;
+* nap2 ++;
+}
+}
+ 
+ 
+int main (void) {
+char napis1 [MAX];
+char napis2 [MAX];
+dostaje (napis1);
+przepisz (napis1, napis2);
+printf ( " % s \ n ", napis2);
+system ( " pauza ") ;
+return 0 ;
+}
+
